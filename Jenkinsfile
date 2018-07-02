@@ -19,6 +19,7 @@ pipeline {
             }
             steps {
                 echo 'Run Flyway Migration'
+                sh '/opt/flyway-5.1.3/flyway migrate'
             }
         }
         stage('INT - Deployment') {
