@@ -10,6 +10,13 @@ pipeline {
             }
         }
         stage('INT - DB Migration') {
+          environment {
+                FLYWAY_CONFIG_FILES = filesystem:./sql
+                FLYWAY_URL = jdbc:postgresql://185.150.9.170:5432/testdb
+                FLYWAY_USER = flyway
+                FLYWAY_PASSWORD = flyways-secure-secret
+                FLYWAY_SCHEMAS = evolutionary-db-design
+            }
             steps {
                 echo 'Run Flyway Migration'
             }
