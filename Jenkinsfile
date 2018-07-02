@@ -42,8 +42,10 @@ pipeline {
                 echo 'Deploy application'
             }
         }
-        stage('Prod Deployment Approval'){
-            input "Deploy to prod?"
+        stage('Prod Deployment Approval') {
+            steps {
+                input "Deploy to prod?"
+            }
         }
         stage('PROD - DB Migration') {
             steps {
