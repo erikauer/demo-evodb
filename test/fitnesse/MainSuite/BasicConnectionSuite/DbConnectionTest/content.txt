@@ -1,0 +1,9 @@
+!path lib/*.jar
+
+!|dbfit.PostgresTest|
+
+|Connect using file|DbfitPostgresDBConnection.properties|
+
+!|Query| select 'test' as x|
+|x|
+|test|
