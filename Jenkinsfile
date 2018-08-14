@@ -22,7 +22,7 @@ pipeline {
         }
         stage('INT - Fitnesse Tests') {
             steps {
-                sh './scripts/runFitnesseTests.sh'
+                sh '/opt/dbfit/startFitnesse.sh -v -o -r "test/fitnesse" -f /opt/dbfit/plugins.properties -d "$(pwd)" -c "MainSuite?suite&format=text"'
             }
         }
         stage('INT - Deployment') {
