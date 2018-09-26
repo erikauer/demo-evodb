@@ -10,7 +10,7 @@ pipeline {
         stage('INT - DB Migration') {
             environment {
                 FLYWAY_LOCATIONS = 'filesystem:./sql'
-                FLYWAY_URL = 'jdbc:postgresql://185.150.10.24:5432/evodb'
+                FLYWAY_URL = 'jdbc:postgresql://89.145.160.122:5432/evodb'
                 FLYWAY_USER = 'flyway'
                 FLYWAY_PASSWORD = 'flyways-secure-secret'
                 FLYWAY_SCHEMAS = 'evolutionary-db-design'
